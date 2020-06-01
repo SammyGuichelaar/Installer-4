@@ -14,4 +14,21 @@ USE AT OWN RISK. Installation of packages in Installer 4 has not been updated si
 This is merely being released as a fun project & as a nostalgic boost for me. It cannot and should not be used for anything serious. I just want to keep the old 2008 era project alive. 
 
 
+Changes made to the 2008 code base:
+
+| TASK  | Status |
+| ------------- | ------------- |
+| 1. Memory Management | **Done**  |
+| 2. Implementing Daemon to make i5 root | **Done**  |
+| 3. self.source.location is NIL DEBUGGING | **Done** |
+| 4. Get Lua to work | **Done** |
+| 5. Fix curl "Failed initialization" | **Done** |
+| 6. Fixing UIAlertView modernization[1]   | **Partially**  |
+| 7. Rework Database Code   | **Done** |
+| 8. Improving dependacy handling  | **Done**  |
+| 9. Fixing Settings bundle  | Undone - 0%  | **Yes**  |
+| 10. Support more Architectures  | **Done**  |
+| 11. Add Screenshots in Core  | **Done**  | Done  |
+| 12. Add checks for compatibility  | **In Progress**  |
+
 

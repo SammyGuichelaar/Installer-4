@@ -1,0 +1,53 @@
+//
+// Prefix header for all source files of the 'Installer' target in the 'Installer' project
+//
+//  Copyright 2017-2018 Infinidev BV i.o(Sam Guicheelar & Christian Tabuyo). All rights reserved.
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#if !defined(__i386__)
+	#import <UIKit/UIKit.h>
+	#import <QuartzCore/QuartzCore.h>
+#endif
+	#import "ATError.h"
+#endif
+
+#define DEBUG
+
+#define InstallerPreferences				[NSUserDefaults standardUserDefaults]
+#define __REFRESH_INTERVAL__				60 * 60
+
+
+#define __PRIVATE_PATH__			    [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) firstObject]
+
+
+#define __DB_PATH__						[__PRIVATE_PATH__ stringByAppendingPathComponent:@"Installer.db"]
+#define	__ICON_CACHE_PATH__				[__PRIVATE_PATH__ stringByAppendingPathComponent:@"IconCache"]
+#define	__DOWNLOADS_PATH__				[__PRIVATE_PATH__ stringByAppendingPathComponent:@"Downloads"]
+
+#define __FEATURED_LOCATION__				@"https://infini-dev.org"
+#define __TRUSTED_SOURCES_LOCATION__		@"http://samguichelaar.com/irepository/trusted.plist"
+
+#define __DEFAULT_SOURCE_NAME__				@"AppTapp"
+#define __DEFAULT_SOURCE_CATEGORY__			@"Community Sources"
+#define __DEFAULT_SOURCE_LOCATION__			@"http://samguichelaar.com/irepository"
+#define __DEFAULT_SOURCE_MAINTAINER__		@"AppTapp"
+#define __DEFAULT_SOURCE_CONTACT__			@"support@apptapp.me"
+
+#define __INSTALLER_NAME__					@"Installer"
+#define __INSTALLER_VERSION__				[[NSBundle bundleForClass:[NSClassFromString(@"ATDatabase") class]] objectForInfoDictionaryKey:@"CFBundleVersion"]
+#define __USER_AGENT__						[NSString stringWithFormat:@"Install/%@ (%@/%@, like CFNetwork/220.0)", __INSTALLER_VERSION__, [ATPlatform platformName], [ATPlatform firmwareVersion]]
+#define __INSTALLER_BUNDLE_IDENTIFIER__		@"com.apptapp.install"
+#define __INSTALLER_CONTACT__				@"support@apptapp.com"
+#define __INSTALLER_CATEGORY__				@"System"
+#define __INSTALLER_DESCRIPTION__			@"AppTapp Installer is the package manager for that is designed for iOS."
+
+#define __COMMUNITY_SOURCES_CATEGORY__		@"Community Sources"
+#define __UNCATEGORIZED__					@"Uncategorized"
+
+#ifdef DEBUG
+	#define Log(...) NSLog(__VA_ARGS__)
+#else
+	#define Log(...) {}
+#endif
